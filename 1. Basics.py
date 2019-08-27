@@ -41,7 +41,24 @@ import matplotlib.pyplot as plt
 # plt.scatter(names, values)
 # 
 # plt.suptitle("Categorical plots")
-# 
+# list1 = []
+# list2 = []
+#
+# [list1.append(x) for x in range(0,25)]
+# [list2.append(x**4) for x in range(0,25)]
+#
+# plt.figure(figsize=(9,9))
+#
+# plt.subplot(132)
+# plt.plot(list1, list2, label='Line!')
+#
+# plt.xlabel('X-axis')
+# plt.ylabel('Y-axis')
+#
+# plt.legend()
+#
+# plt.title("This is a\ngreat graph!!\n")
+#
 # plt.show()
 
 
