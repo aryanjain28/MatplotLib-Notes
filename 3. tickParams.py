@@ -16,6 +16,7 @@ myAxes.tick_params(
     pad = 5.0,
     labelsize = 8,
     labelcolor= 'b',
+    labelrotation = 12,
     bottom = False,
     top = True,
     labelleft = True,
