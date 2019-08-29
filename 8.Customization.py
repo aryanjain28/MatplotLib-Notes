@@ -1,12 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-import random
-import csv
-import time
-import matplotlib.dates as mdates
-from datetime import datetime
-import urllib.request
-import matplotlib.spines as spines
 
 x = np.arange(10,210,10)
 y = [20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30]
@@ -15,25 +8,44 @@ y = [20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30]
 figure, ax1 = plt.subplots(nrows=1,ncols=1)
 
 
-plt.xlabel(
-    'X-axis',
-    text='X-label',
-    color='r',
-    rotation=-12,
-    rotation_mode='default',
-    fontfamily='serif',
-    fontsize='21',
-    fontstretch='ultra-expanded',
-    fontstyle='italic',
-    fontweight='extra bold',
-    verticalalignment='center',
-    horizontalalignment='center',
-    backgroundcolor = 'cyan',
-    alpha = 0.75,
-    visible = True,
-    linespacing = 0.22,
-    clip_on = True
-)
+#using axes.... (preferred!)
+
+ax1.xaxis.label.set_color('r')
+ax1.xaxis.label.set_text('X-label')
+ax1.xaxis.label.set_size(15)
+ax1.xaxis.label.set_rotation((12))
+ax1.xaxis.label.set_fontfamily('serif')
+ax1.xaxis.label.set_fontstyle('italic')
+ax1.xaxis.label.set_fontweight('extra bold')
+ax1.xaxis.label.set_backgroundcolor('cyan')
+ax1.xaxis.label.set_verticalalignment('center')
+ax1.xaxis.label.set_horizontalalignment('center')
+ax1.xaxis.label.set_alpha(0.75)
+ax1.xaxis.label.set_visible(True)
+ax1.xaxis.label.set_linespacing(0.56)
+
+
+#using plt...
+#
+# plt.xlabel(
+#     'X-axis',
+#     text='X-label',
+#     color='r',
+#     rotation=-12,
+#     rotation_mode='default',
+#     fontfamily='serif',
+#     fontsize='21',
+#     fontstretch='ultra-expanded',
+#     fontstyle='italic',
+#     fontweight='extra bold',
+#     verticalalignment='center',
+#     horizontalalignment='center',
+#     backgroundcolor = 'cyan',
+#     alpha = 0.75,
+#     visible = True,
+#     linespacing = 0.22,
+#     clip_on = True
+# )
 
 
 
