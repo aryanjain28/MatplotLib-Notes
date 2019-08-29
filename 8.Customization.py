@@ -6,12 +6,13 @@ import time
 import matplotlib.dates as mdates
 from datetime import datetime
 import urllib.request
+import matplotlib.spines as spines
 
 x = np.arange(10,210,10)
 y = [20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30,20,40,20,30]
 
 
-plt.figure(figsize=(19,6))
+figure, ax1 = plt.subplots(nrows=1,ncols=1)
 
 
 plt.xlabel(
@@ -60,11 +61,25 @@ plt.ylabel(
 plt.fill([50,70,70,50],[27.5,27.5,35,35],'b',alpha=0.5)       #used to fill colors between defined coordinates
 plt.fill([20,30,40],[27.5,35,27.5],'r',alpha=0.5)
 
-plt.fill_between(x, y,y[0], alpha=0.5)
-# plt.fill_between(x, y,  30,   where=(30 < y[0]), facecolor='r', alpha=0.5)              #used to fill the space inside plotted line
+plt.fill_between(x, y,y[0], alpha=0.5)          #used to fill the space inside plotted line
+
+
+#spines are the lines that over which ticks are constructed
+ax1.spines['left'].set_color('r')
+ax1.spines['bottom'].set_color('r')
+ax1.spines['right'].set_visible(False)
+ax1.spines['top'].set_visible(False)
+ax1.spines['bottom'].set_linewidth(5)
+ax1.spines['left'].set_linewidth(5)
+
+
+#axhline line draw a horizontal line
+ax1.axhline(30, color='k', linewidth=2, alpha=0.65)
+
+#axvline line draw a vertical line
+ax1.axvline(50, color='k', linewidth=2, alpha=0.65)
 
 plt.plot(x,y,label='X')
-
 plt.grid(True)
 plt.legend()
 plt.show()
