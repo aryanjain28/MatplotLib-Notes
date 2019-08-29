@@ -24,4 +24,6 @@ myAxes.tick_params(
     grid_color = 'k'
 )
 
+plt.subplots_adjust(left=0.09, bottom=0.20, right=0.94, top=0.9, wspace=0.2, hspace=12)
+plt.grid(True, color='g', linestyle='-', linewidth=0.2, alpha=0.75)
 plt.show()
